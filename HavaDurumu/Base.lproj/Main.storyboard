@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DPQ-yQ-kMa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HavaDurumu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-kC-Smh">
+                                <rect key="frame" x="8" y="139" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-vH-0FJ">
+                                <rect key="frame" x="96.5" y="185" width="181" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Hava Durumunu Göster">
+                                    <color key="titleColor" red="0.58431372549019611" green="0.77647058823529413" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToTodayWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZV-fN-mpS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hava Durumunu Görmek İstediğiniz Şehri Yazınız" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfk-J8-503">
+                                <rect key="frame" x="16" y="80" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60664760467624412" green="0.78492397839184236" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CIg-kC-Smh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gq-eb-kfg"/>
+                            <constraint firstItem="CIg-kC-Smh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5za-OC-BVW"/>
+                            <constraint firstItem="CIg-kC-Smh" firstAttribute="top" secondItem="Sfk-J8-503" secondAttribute="bottom" constant="16" id="77M-ht-4tN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CIg-kC-Smh" secondAttribute="trailing" constant="8" id="L4S-q1-ZqF"/>
+                            <constraint firstItem="AHc-vH-0FJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P5T-v5-Z58"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sfk-J8-503" secondAttribute="trailing" constant="16" id="Wsi-oD-J02"/>
+                            <constraint firstItem="Sfk-J8-503" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cDb-nh-gEO"/>
+                            <constraint firstItem="AHc-vH-0FJ" firstAttribute="top" secondItem="CIg-kC-Smh" secondAttribute="bottom" constant="16" id="kwG-yW-Wlk"/>
+                            <constraint firstItem="Sfk-J8-503" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="qBG-ph-vP9"/>
+                            <constraint firstItem="Sfk-J8-503" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zdO-Yi-fVk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eiP-e5-nB3"/>
+                    <connections>
+                        <outlet property="cityName" destination="CIg-kC-Smh" id="GeS-ah-Z2n"/>
+                        <outlet property="showButton" destination="AHc-vH-0FJ" id="AOE-JT-Kpn"/>
+                        <segue destination="1ts-0e-0IV" kind="show" id="VX7-77-dHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Today Weather Table View Controller-->
+        <scene sceneID="miu-PG-8uL">
+            <objects>
+                <tableViewController storyboardIdentifier="TodayWeatherStoaryBoardID" id="1ts-0e-0IV" customClass="TodayWeatherTableViewController" customModule="HavaDurumu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D49-vA-CyL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayWeatherCell" id="EOx-ff-m7K" customClass="TodayweatherTableViewCell" customModule="HavaDurumu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOx-ff-m7K" id="HrJ-oB-5eG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seçtiğiniz şehit: Istanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03v-tY-8Cw">
+                                            <rect key="frame" x="24" y="11.5" width="185.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="03v-tY-8Cw" firstAttribute="leading" secondItem="HrJ-oB-5eG" secondAttribute="leadingMargin" constant="8" id="4Dz-ze-V3F"/>
+                                        <constraint firstItem="03v-tY-8Cw" firstAttribute="centerY" secondItem="HrJ-oB-5eG" secondAttribute="centerY" id="vBi-AQ-V83"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="2048" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="selectedText" destination="03v-tY-8Cw" id="xya-ap-bN1"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayWeatherResultCell" rowHeight="119" id="2lH-Ej-U07" customClass="TodayWeatherResultTableViewCell" customModule="HavaDurumu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="119"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2lH-Ej-U07" id="1KV-oU-K3t">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hava Durumu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnh-i2-J9Z">
+                                            <rect key="frame" x="129" y="49" width="117.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="mOD-VV-87x"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.58431372549019611" green="0.77647058823529413" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvM-xB-e7i">
+                                            <rect key="frame" x="178.5" y="78" width="17.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rvM-xB-e7i" firstAttribute="centerX" secondItem="1KV-oU-K3t" secondAttribute="centerX" id="BU1-r6-uvS"/>
+                                        <constraint firstItem="Pnh-i2-J9Z" firstAttribute="centerX" secondItem="1KV-oU-K3t" secondAttribute="centerX" id="WQz-Vl-Ugu"/>
+                                        <constraint firstItem="Pnh-i2-J9Z" firstAttribute="centerY" secondItem="1KV-oU-K3t" secondAttribute="centerY" id="dV0-c7-SAa"/>
+                                        <constraint firstItem="rvM-xB-e7i" firstAttribute="top" secondItem="Pnh-i2-J9Z" secondAttribute="bottom" constant="8" id="hNP-is-P6T"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="resultText" destination="rvM-xB-e7i" id="mUi-3f-xH1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1ts-0e-0IV" id="BAo-5F-fZ0"/>
+                            <outlet property="delegate" destination="1ts-0e-0IV" id="Jch-sG-uf2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsu-cg-Tv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898.4000000000001" y="143.47826086956522"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vn8-hf-mv2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DPQ-yQ-kMa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xsG-PN-n7c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3B5-rU-Tpb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKC-6v-JYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="-554.57271364317842"/>
+        </scene>
+    </scenes>
+</document>
